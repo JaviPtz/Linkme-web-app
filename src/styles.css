@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+/* Fuente */
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Montserrat:wght@100;400&display=swap");
+
+/* variables colores*/
+:root {
+  /* generales*/
+  --color-general: rgb(230, 230, 230);
+  /* navbar */
+  --color-menu: rgb(31, 31, 31);
+  --color-pestanas: rgb(0, 0, 0);
+  --color-pestanas-hover: rgb(255, 0, 0);
+  /* footer */
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-family: "Coming Soon", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  margin-top: 1rem;
+  padding: 3rem 9%;
+}
+
+/* CABEZERA DE CONTENIDO */
+
+.header-content{
+  margin: 1rem 0;
+} 
+.header-content .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.header-content p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+
+/*  TITULOS HOME */
+
+.title-home{
+  font-size: 2rem ;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 1rem solid rgb(0, 0, 0);
+}

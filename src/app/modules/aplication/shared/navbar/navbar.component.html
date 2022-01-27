@@ -1,0 +1,56 @@
+<!-- navbar -->
+<header class="header">
+  <nav class="navbar">
+    <div class="brand">
+      <a href="/app/home" class="logo">LINKME</a>
+    </div>
+    <!-- LISTA DE NAVEGACION -->
+    <div class="nav-list">
+      <div class="hamburguer" (click)="menu()">
+        <img
+          id="bar"
+          src="https://img.icons8.com/plumpy/24/000000/menu-rounded.png"
+        />
+      </div>
+      <ul>
+        <li>
+          <a routerLink="/app/work" routerLinkActive="active" data-after="Works"
+          (click)="removeMemu()">Works</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/app/about"
+            routerLinkActive="active"
+            data-after="About"
+            (click)="removeMemu()">About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/app/our_story"
+            routerLinkActive="active"
+            data-after="Story"
+            (click)="removeMemu()">Our Story</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/app/client"
+            routerLinkActive="active"
+            data-after="Clients"
+            (click)="removeMemu()">Clients</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/app/contact"
+            routerLinkActive="active"
+            data-after="Contac"
+            (click)="removeMemu()">Contac</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

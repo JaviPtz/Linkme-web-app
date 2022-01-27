@@ -1,0 +1,67 @@
+.about{
+    margin-top: 4rem;
+    text-align: justify;
+}
+
+.about .content .header-content h4{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    background: rgb(230, 230, 230, .4);
+    padding: 0.8rem 0;
+    border-radius: 2rem;
+}
+
+.about .content .header-content p{
+    text-align: center;
+    font-weight: 600;
+}
+
+/* NUESTRO EQUIPO */
+
+.about .content .our-team{
+    margin: 1rem 0;
+    background: var(--color-navbar);
+    padding: 2rem 0;
+}
+
+.about .content .our-team h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.about .content .our-team .items-team{
+    display: flex;
+}
+
+.about .content .our-team .items-team .row{
+    display: flex;
+    margin: 0 auto;
+    gap: 2rem;
+}
+.about .content .our-team .items-team .item{
+    text-align: center;
+}
+
+.about .content .our-team .items-team .item img{
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: none;
+}
+
+.about .content .our-team .items-team h4{
+    font-size: 1.4rem;
+}
+
+.about .content .our-team .items-team p{
+    font-size: 1.3rem;
+}
+

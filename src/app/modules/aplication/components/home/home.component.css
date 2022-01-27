@@ -1,0 +1,111 @@
+/* .background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.vexels.com/media/users/3/148179/isolated/preview/d52d4be4306882c9d2c0c561640af2ad-marco-de-fondo-de-hojas-de-otono.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: -100;
+}
+ */
+
+#home {
+  background: url(https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440)
+    no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(27, 27, 27);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.home .content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TITULO BIENVENIDA */
+.home .content .title {
+  font-size: 3rem;
+  display: block;
+  width: fit-content;
+  color: white;
+}
+
+/* DESCRIPCION */
+.home .content p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem 0;
+  background-color: transparent;
+  transition: 0.3s ease;
+  transition-property: color;
+}
+
+.home .content p:hover {
+  color: white
+}
+/* ------------- */
+/* CONTENIDO COMPARTIDO */
+/* ------------- */
+
+
+.shared .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.shared .row .image{
+  flex:  1 1 41rem;
+}
+
+.shared .row .image img{
+  width: 100%;
+}
+
+
+.shared .row .shared-content{
+  flex: 1 1 41rem;
+}
+
+.shared .row .shared-content h3{
+  font-size: 3rem;
+}
+
+.shared .row .shared-content p{
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  
+}
+
+/* BOTON  */
+
+.btn{
+  background: var(--color-general);
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 700;
+}
+
+.btn:hover{
+  color: rgb(255, 255, 255);
+}

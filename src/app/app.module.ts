@@ -2,15 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+//Module de aplication
+import { AplicationModule } from './modules/aplication/aplication.module';
+//componete de aplicación Notfound
+import { NotFoundComponent } from './modules/aplication/shared/not-found/not-found.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    NotFoundComponent
+  ], 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AplicationModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

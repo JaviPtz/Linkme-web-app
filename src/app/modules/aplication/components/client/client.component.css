@@ -1,0 +1,18 @@
+.client{
+    margin-top: 4rem;
+}
+
+.client .content{
+    max-width: 70rem;
+    text-align: center;
+    /* centrar contenido */
+    margin: 0 auto;
+}
+.client .content h3{
+    font-size: 3rem;
+}
+
+.client .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
