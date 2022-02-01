@@ -27,7 +27,7 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgb(27, 27, 27);
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0.3;
   z-index: -1;
 }
@@ -41,7 +41,8 @@
 
 /* TITULO BIENVENIDA */
 .home .content .title {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 400;
   display: block;
   width: fit-content;
   color: white;
@@ -50,10 +51,10 @@
 /* DESCRIPCION */
 .home .content p {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 300;
   display: inline-block;
   padding: 1rem 0;
-  background-color: transparent;
   transition: 0.3s ease;
   transition-property: color;
 }
@@ -102,10 +103,10 @@
   background: var(--color-general);
   padding: 1rem;
   font-size: 1.5rem;
-  color: black;
+  color: var(--color-letra);
   font-weight: 700;
 }
 
 .btn:hover{
-  color: rgb(255, 255, 255);
+  background: var(--color-boton-hover);
 }

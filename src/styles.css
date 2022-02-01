@@ -5,12 +5,12 @@
 /* variables colores*/
 :root {
   /* generales*/
-  --color-general: rgb(230, 230, 230);
-  /* navbar */
-  --color-menu: rgb(31, 31, 31);
-  --color-pestanas: rgb(0, 0, 0);
-  --color-pestanas-hover: rgb(255, 0, 0);
-  /* footer */
+  --color-general: rgba(100, 0, 0);
+  --color-menu: rgb(3, 3, 3);
+  --color-letra: rgb(255, 255, 255);
+  --color-pestanas-hover: rgba(100, 0, 0);
+  --color-boton-hover: rgb(120, 0, 0);
+
 
 }
 
@@ -24,27 +24,42 @@
   transition: all 0.2s linear;
 }
 
-html {
+/* Quitar ::-webkit-scrollbar con su propiedad display:none para mostrar los scrolls*/
+
+html::-webkit-scrollbar {
   font-family: "Coming Soon", cursive;
   font-family: "Montserrat", sans-serif;
+  display: none;
 }
 
 section {
-  margin-top: 1rem;
+  background: rgba(220, 220, 220, 0.5);
   padding: 3rem 9%;
 }
 
-/* CABEZERA DE CONTENIDO */
+/* CONTENIDO SUPEIOR */
 
-.header-content{
-  margin: 1rem 0;
+.top-content{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
-.header-content .section-title {
-  font-size: 3rem;
-  font-weight: 700;
+
+.top-content .inf-content{
+  max-width: 800px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.top-content .inf-content .description{
+  font-size: 2rem;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  text-align: center;
+
 }
 
 .header-content p {
@@ -53,11 +68,11 @@ section {
   font-weight: 300;
 }
 
-/*  TITULOS HOME */
+/*  TITULOS PANTALLA HOME */
 
 .title-home{
   font-size: 2rem ;
   margin-bottom: 2rem;
   padding-left: 1rem;
-  border-left: 1rem solid rgb(0, 0, 0);
+  border-left: 1rem solid var(--color-menu);
 }

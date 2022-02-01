@@ -11,7 +11,6 @@
 } */
 
 .header{
-    padding: 2rem 9%;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -22,10 +21,15 @@
     background-color: var(--color-general);
 }
 
-.header .logo{
+.header .navbar{
+    padding: 2rem 9%;
+}
+
+.header .navbar .logo{
+    text-decoration: none;
     font-size: 2rem;
-    color: var(--color-pestanas);
-    font-weight: 700;
+    color: var(--color-letra);
+    font-weight: 600;
 }
 
 .header .navbar{
@@ -38,7 +42,7 @@
 
 /* LISTA DE NAVEGACION */
 
-.header .navbar .nav-list ul{
+.header .navbar .nav-list ul {
     list-style: none;
     position: absolute;
     background-color: var(--color-menu)  ;
@@ -107,6 +111,15 @@
     margin: 0.3rem;
 }
 
+/* Selector */
+.languaje{
+    padding: .6rem;
+    background: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 25%;
+}
+
 
 @media only screen and (min-width:1200px){
     
@@ -126,9 +139,9 @@
         display: inline-block;
     }
     .header .navbar .nav-list ul li a{
-        color: var(--color-pestanas);
+        color: var(--color-letra);
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         padding: 0px;
         margin: 0px 10px;
     }

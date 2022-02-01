@@ -1,59 +1,56 @@
-.work {
-  margin-top: 4rem;
+.flecha{
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(75% 0, 75% 37%, 100% 40%, 50% 100%, 0 40%, 25% 40%, 25% 0);
 }
 
-.works-content {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+/* ALBUM */
+.album{
+  padding: 1rem;
+  border: 1px;
+  border: dashed rgb(0, 0, 0);
 }
 
-.works-content .card_item{
-	width: 33.33%;
-}
 
-.works-content .card_item .card_inner{
+
+.album .row .col .card{
+  border: none;
   position: relative;
-  display: inline-block;
   overflow: hidden ;
   text-align: center;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  
 }
 
-.works-content .card_item .card_inner img{
-  width: 100%;
-	height: 300px;
+.album .row .col .card img{
+  width: 400px;
+	height: 400px;
   transition: all 600ms;
 }
 
-.works-content .card_item .card_inner:hover img{
-  transform: scale(1.6);
-}
+.album .row .col .card:hover img{
+  transform: scale(1.8);
+} 
 
-.works-content .card_item .card_inner .content{
+.album .row .col .card .content{
   position: absolute;
+  right: 50%;
+  top: -10%;
   text-transform: uppercase;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  font-size: 1rem;
-  font-weight: 700;
-  background: rgb(30, 30, 30, .8);
+  color: rgb(255, 255, 255);
+  transform: translate(50%, 50%) scale(0);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: rgba(3, 3, 3, 0.6);
   padding: 1.5rem;
-
 }
 
-.works-content .card_item .card_inner:hover .content{
-  transform: translate(-50%, -50%) scale(1);
+.album .row .col .card:hover .content{
+  transform: translate(50%, 50%) scale(1);
 }
 
+/* FIN DE ALBUM */
 
-@media(max-width: 1200px){
-  .works-content {
-    text-align: center;
-  }
-	.works-content .card_item{
-		width: 100%;
-	}
 
-}

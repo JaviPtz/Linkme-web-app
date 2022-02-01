@@ -1,19 +1,20 @@
 .footer{
     text-align: center;
+    color: var(--color-letra);
     background: var(--color-general);
 }
 .footer p{
     text-align: center;
 }
-.footer .row{
+.footer .we-row{
     display: flex;
     flex-wrap: wrap;
     padding: 1rem 0;
-    gap: 10rem;
+    gap: 8rem;
 }
 
 /* Dirección */
-.footer .row h3{
+.footer .we-row h3{
     text-align: left;
     text-transform: uppercase;
     font-size: 2rem;
@@ -21,31 +22,25 @@
 
 }
 
-.footer .row .address h4,p{
+.footer .we-row .address h4,p{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* contenido */
+
+.footer .we-row .contenido  a{
+    display: block;
     text-align: left;
     margin-bottom: 1rem;
 }
 
 /* redes sociales */
-.footer .socials{
-    gap: 5rem;
-}
-
-.footer .row .socials .social-icons{
+.footer .we-row .socials .social-icons{
     display: flex;
 }
 
-.footer .row .socials .social-icons .social-item{
-    margin: 0 10px;
-}
-
-.footer .row .socials .social-icons .social-item img{
+.footer .we-row .socials .social-icons .social-item img{
     height: 70px;
     width: 70px;
-    filter: grayscale(1);
-    transition: .4s ease filter;
-}
-
-.footer .row .socials .social-icons .social-item img:hover{
-    filter: grayscale(0);
 }

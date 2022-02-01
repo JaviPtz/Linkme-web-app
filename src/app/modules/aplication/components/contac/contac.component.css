@@ -1,5 +1,5 @@
 .contact{
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 /* filas  */
@@ -7,17 +7,16 @@
 .contact .row{
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
-    gap: 2rem;
-    background: rgb(230, 230, 230, 30%);
-    border-radius: 2rem  0 2rem 0;
+    padding: 1rem;
+    gap: 3rem;
+    box-shadow: 1px 1px 1px 2px rgb(230, 230, 230, 30%);
 }
 
 /* mapa */
 
 .contact .row .map{
     width: 50%;
-    border-radius: 2rem  0 2rem 0;
+    height: 500px;
 }
 
 /* formulario */
@@ -29,9 +28,11 @@
 
 /* Datos */
 .contact .row .form .identity{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
     text-align: center;
     font-size: 2rem;
-    text-transform: uppercase;
 }
 
 .contact .row .form .icons-container{
@@ -59,6 +60,7 @@
 }
 
 .contact .row .form .icons-container .icons h3{
+    font-weight: 400;
     padding: 1rem 0;
 }
 
@@ -68,9 +70,20 @@
     html{
         font-size: 55%;
     }
+
+    .contact .row{
+        padding: 0rem;
+        box-shadow: none;
+        border-radius: 0rem;
+    }
+
     .contact .row .map{
+        border-radius: 0rem;
         width: 100%;
-        gap:2rem;
+    }
+
+    .contact .row .form {
+        margin-top: 1rem;
     }
 }
 

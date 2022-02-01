@@ -1,7 +1,7 @@
 <!-- navbar -->
 <header class="header">
   <nav class="navbar">
-    <div class="brand">
+    <div>
       <a href="/app/home" class="logo">LINKME</a>
     </div>
     <!-- LISTA DE NAVEGACION -->
@@ -12,7 +12,7 @@
           src="https://img.icons8.com/plumpy/24/000000/menu-rounded.png"
         />
       </div>
-      <ul>
+      <ul class="lista">
         <li>
           <a routerLink="/app/work" routerLinkActive="active" data-after="Works"
           (click)="removeMemu()">Works</a
@@ -49,6 +49,12 @@
             data-after="Contac"
             (click)="removeMemu()">Contac</a
           >
+        </li>
+        <li>
+          <select class="languaje">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
         </li>
       </ul>
     </div>
