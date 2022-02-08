@@ -26,10 +26,35 @@
 }
 
 .header .navbar .logo{
+    display: inline-block;
     text-decoration: none;
     font-size: 2rem;
     color: var(--color-letra);
     font-weight: 600;
+}
+
+.header .navbar .logo a{
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+/* superAdmin */
+
+.superUser{
+    background: transparent ;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.superUser:hover{
+    cursor: pointer;
+    background: rgba(160, 0, 0, 0.993);
+}
+.superUser:hover{
+    transform: scale(1);
 }
 
 .header .navbar{
@@ -66,7 +91,6 @@
 .header .navbar .nav-list ul a{
     font-size: 2.5rem;
     font-weight: 500;
-    letter-spacing: .2rem;
     text-decoration: none;
     color: white;
     text-transform: uppercase;

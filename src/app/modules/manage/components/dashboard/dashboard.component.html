@@ -1,0 +1,67 @@
+<section class="manage">
+  
+  <div class="new-admin">
+    <button class="btn-add" routerLink="/register">
+      Agregar administrador
+    </button>
+  </div>
+
+  <!-- Detalle -->
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-2">
+    <!-- formulario -->
+    <div class="form">
+      <div class="col">
+        <h3>Formulario</h3>
+        <div>
+          <form (submit)="uploadWork(titulo, descripcion)">
+            <div>
+              <input
+                type="text"
+                placeholder="Titulo del proyecto"
+                required
+                #titulo
+              />
+            </div>
+            <div>
+              <textarea
+                type="text"
+                rows="5"
+                placeholder="Descripción"
+                required
+                #descripcion
+              ></textarea>
+            </div>
+            <div>
+              <input
+                type="file"
+                (change)="fotoSeleccionada($event)"
+                #photoInput
+              />
+            </div>
+            <button class="btn-add">Agregar</button>
+          </form>
+        </div>
+      </div>
+    
+    </div>
+
+    <!-- proyecto -->
+    <div class="projects">
+      <h3>Proyecto Actuales</h3>
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col" *ngFor="let workPhoto of myPhotosWorks">
+          <div class="project">
+            <div class="title">
+              {{ workPhoto.titulo }}
+            </div>
+            <img class="image"
+              (click)="selectedCard(workPhoto._id)"
+              data-bs-toggle="modal"
+              [src]="'http://localhost:3000/' + workPhoto.image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

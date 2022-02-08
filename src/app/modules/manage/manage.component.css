@@ -1,0 +1,16 @@
+.header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    min-height: 8vh;
+    background-color: var(--color-general);
+    color: white;
+}
+
+.header .navbar{
+    padding: 2rem 9%;
+    font-size: 2rem;
+}

@@ -8,6 +8,7 @@ import { StoryComponent } from './components/story/story.component';
 import { WorkComponent } from './components/work/work.component';
 import { ClientComponent } from './components/client/client.component';
 import { ContacComponent } from './components/contac/contac.component';
+import { WorkDetailsComponent } from './components/work-details/work-details.component';
 
 const routes: Routes = [
     {
@@ -15,6 +16,7 @@ const routes: Routes = [
         children: [
             {path: 'home', component: HomeComponent},
             {path: 'work', component: WorkComponent},
+            {path: 'work/:id', component: WorkDetailsComponent},
             {path: 'about', component: AboutComponent},
             {path: 'our_story', component: StoryComponent},
             {path: 'client', component: ClientComponent},

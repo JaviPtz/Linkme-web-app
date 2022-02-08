@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CargarScriptsService } from 'src/app/cargar-scripts.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +9,14 @@ import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 export class NavbarComponent implements OnInit {
   mobile_menu: any;
   mobile_item: any;
+   /* lista de idiomas */
+  langs: string[] =[];
 
-  constructor(private _CargarScripts: CargarScriptsService) {
-    _CargarScripts.Carga(['estilos/navbar']);
+  constructor(
+    private translate: TranslateService) {
+    /* idiomas que soporta la web */
+    translate.addLangs(['es', 'en']);
+    this.langs = translate.getLangs();
   }
 
   ngOnInit(): void {}
@@ -31,5 +36,9 @@ export class NavbarComponent implements OnInit {
     this.mobile_menu = document
       .querySelector('.header .navbar .nav-list ul')
       ?.classList.toggle('active');
+  }
+  /* Cambiar idioma */
+  changeLang(lang: string){
+    this.translate.use(lang);
   }
 }

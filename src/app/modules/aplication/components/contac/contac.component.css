@@ -5,18 +5,18 @@
 /* filas  */
 
 .contact .row{
+    margin: 8rem 0; 
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
     gap: 3rem;
-    box-shadow: 1px 1px 1px 2px rgb(230, 230, 230, 30%);
 }
 
 /* mapa */
 
 .contact .row .map{
     width: 50%;
-    height: 500px;
+    height: 600px;
 }
 
 /* formulario */
@@ -72,10 +72,12 @@
     }
 
     .contact .row{
+        margin: 3rem 0;
         padding: 0rem;
         box-shadow: none;
         border-radius: 0rem;
     }
+
 
     .contact .row .map{
         border-radius: 0rem;
@@ -91,6 +93,7 @@
     html{
         font-size: 50%;
     }
+
 
     .contact .row .form .icons-container .icons{
         flex-direction: column;

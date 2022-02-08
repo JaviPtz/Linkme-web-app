@@ -1,0 +1,99 @@
+.manage {
+  margin-top: 6rem;
+  height: 100vh;
+}
+
+.new-admin {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* formulario  */
+
+.form {
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  text-align: center;
+  /*IMPORTANTE CENTRAR*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .col form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.form .col form input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.form .col form textarea {
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-add {
+  background: green;
+  padding: 1rem;
+  width: 25%;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.btn-add:hover {
+  background: rgb(0, 170, 0);
+  color: rgb(0, 0, 0);
+}
+
+/*  proyecto  */
+
+.projects {
+  text-align: center;
+  height: 750px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* apariencia del scroll */
+.projects::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.projects::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+/* fin apariencia del scroll */
+
+.projects .row .col .project {
+  text-align: center;
+  margin: 1rem 0;
+  width: 250px;
+}
+
+.projects .row .col .project .image {
+  width: 250px;
+  height: 200px;
+}
+
+.projects .row .col .project .title {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.projects .row .col .project:hover,
+.projects .row .col .project .image:hover {
+  background: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}

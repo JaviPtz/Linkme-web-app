@@ -3,6 +3,7 @@
   <div class="top-content">
     <div class="inf-content">
       <div class="description">
+        <h4>Hecha un vistazo nuestro trabajo</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quo
           laborum consequuntur sit rerum.
@@ -12,107 +13,49 @@
           ut necessitatibus.
         </p>
       </div>
+      <br />
+      <br />
       <div class="flecha"></div>
     </div>
   </div>
   <!-- album -->
   <div class="album">
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
       <!-- proyecto -->
-      <div class="col">
-        <div class="card">
+      <div class="col" *ngFor="let workPhoto of myPhotosWorks">
+        <div class="workimg" (click)="selectedCard(workPhoto._id)">
           <img
-            href="#p1"
-            data-bs-toggle="modal"
-            src="https://cutewallpaper.org/22/software-engineer-wallpapers/927913659.jpg"
+            [src]="'http://localhost:3000/' + workPhoto.image"
           />
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
+            {{workPhoto.titulo}}
           </div>
         </div>
       </div>
-      <!-- PROYECTO -->
-      <div class="col">
-        <div class="card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntrob4Z-qoVar6ScF5wdjpQjsDo4Eh336HA&usqp=CAU"
-          />
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
-          </div>
+    </div>
+  </div>
+
+  <br />
+
+  <!-- otro album -->
+  <div class="row mb-2">
+    <div class="col-md-6" *ngFor="let workPhoto of myPhotosWorks">
+      <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">{{workPhoto.titulo}}</h3>
+          <div class="mb-1 text-muted">---------------------------------------------------------------</div>
+          <p class="card-text mb-auto">{{workPhoto.descripcion}}</p>
+          <p  class="stretched-link" (click)="selectedCard(workPhoto._id)">Seguir leyendo</p>
         </div>
-      </div>
-      <!-- PROYECTO -->
-      <div class="col">
-        <div class="card">
-          <img
-            src="http://www.elpaccto.eu/wp-content/uploads/2021/10/shutterstock_1919373725-min-scaled.jpg"
-          />
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
-          </div>
-        </div>
-      </div>
-      <!-- PROYECTO -->
-      <div class="col">
-        <div class="card">
-          <img
-            src="http://www.elpaccto.eu/wp-content/uploads/2021/10/shutterstock_1919373725-min-scaled.jpg"
-          />
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
-          </div>
-        </div>
-      </div>
-      <!-- PROYECTO -->
-      <div class="col">
-        <div class="card">
-          <img
-            src="http://www.elpaccto.eu/wp-content/uploads/2021/10/shutterstock_1919373725-min-scaled.jpg"
-          />
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
-          </div>
-        </div>
-      </div>
-      <!-- PROYECTO -->
-      <div class="col">
-        <div class="card">
-          <img
-            src="http://www.elpaccto.eu/wp-content/uploads/2021/10/shutterstock_1919373725-min-scaled.jpg"
-          />
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit reiciendistiae.
-          </div>
+        <div class="col-auto d-none d-lg-block">
+          <img width="350" height="350"
+              [src]="'http://localhost:3000/' + workPhoto.image"
+            />
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MOLADES -->
 
-<!-- Modal 1 Cerro la Viudita-->
-<div class="modal" id="p1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-bs-dismiss="modal">
-        <img
-          src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-left-arrows-those-icons-fill-those-icons-7.png"
-        />
-      </div>
-      <h3>Nombre</h3>
-      <div class="row">
-        <div class="col">
-          <h3>Información</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem sint
-            officia neque molestiae eum. Quibusdam nemo velit, nobis temporibus
-            similique fugiat quae rem nostrum dicta sequi error expedita sed
-            eligendi?
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+

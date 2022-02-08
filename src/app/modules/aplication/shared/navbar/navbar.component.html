@@ -1,8 +1,9 @@
 <!-- navbar -->
 <header class="header">
   <nav class="navbar">
-    <div>
-      <a href="/app/home" class="logo">LINKME</a>
+    <div class="logo">
+      <a href="/app/home">LINKME</a>
+      <div class="superUser" routerLink="/login"></div>
     </div>
     <!-- LISTA DE NAVEGACION -->
     <div class="nav-list">
@@ -15,7 +16,7 @@
       <ul class="lista">
         <li>
           <a routerLink="/app/work" routerLinkActive="active" data-after="Works"
-          (click)="removeMemu()">Works</a
+          (click)="removeMemu()">{{ 'NAV1' | translate}}</a
           >
         </li>
         <li>
@@ -23,7 +24,7 @@
             routerLink="/app/about"
             routerLinkActive="active"
             data-after="About"
-            (click)="removeMemu()">About</a
+            (click)="removeMemu()">{{ 'NAV2' | translate}}</a
           >
         </li>
         <li>
@@ -31,7 +32,7 @@
             routerLink="/app/our_story"
             routerLinkActive="active"
             data-after="Story"
-            (click)="removeMemu()">Our Story</a
+            (click)="removeMemu()">{{ 'NAV3' | translate}}</a
           >
         </li>
         <li>
@@ -39,7 +40,7 @@
             routerLink="/app/client"
             routerLinkActive="active"
             data-after="Clients"
-            (click)="removeMemu()">Clients</a
+            (click)="removeMemu()">{{ 'NAV4' | translate}}</a
           >
         </li>
         <li>
@@ -47,13 +48,12 @@
             routerLink="/app/contact"
             routerLinkActive="active"
             data-after="Contac"
-            (click)="removeMemu()">Contac</a
+            (click)="removeMemu()">{{ 'NAV5' | translate}}</a
           >
         </li>
         <li>
-          <select class="languaje">
-            <option value="es">ES</option>
-            <option value="en">EN</option>
+          <select #langSelect (change)="changeLang(langSelect.value)" class="languaje">
+            <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
           </select>
         </li>
       </ul>

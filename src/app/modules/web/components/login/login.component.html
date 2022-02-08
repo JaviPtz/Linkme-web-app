@@ -1,0 +1,42 @@
+<section id="login">
+    <!--  card contenedora -->
+    <div class="login-container">
+      <!--  titulo de la tarjeta  -->
+      <div>
+        <h2>Bienvenido</h2>
+      </div>
+      <!--  formulario de logeo  -->
+      <div class="form">
+        <form [formGroup]="loginForm" (submit)="login()">
+          <!--   input para la email del usuario   -->
+          <div>
+            <input type="text" formControlName="email" placeholder="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)"
+               class="alert">
+              <p>El campo debe estar lleno</p>
+            </div>
+          </div>
+          <!--   input para la contraseña del usuario   -->
+          <div>
+            <input type="password" formControlName="password" placeholder="contraseña">
+            <div class="alert" *ngIf="password.invalid && (password.dirty || password.touched)">
+              <p>El campo debe estar lleno</p>
+            </div>
+          </div>
+          <!--  boton para el envio de la data  -->
+          <input  type="submit" [disabled]="loginForm.invalid" value="Iniciar Sesión">
+        </form>
+        <br>
+        <!--      boton para el redireccionamiento a la web-->
+        <button type="submit" [routerLink]="['/app']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+               class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+          Regresar
+        </button>
+      </div>
+    </div>
+</section>
+  

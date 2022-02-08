@@ -1,3 +1,25 @@
+.work {
+  text-align: justify;
+}
+
+.work .top-content h4 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background: rgb(230, 230, 230, 0.4);
+  padding: 1rem 0;
+  border-radius: 2rem;
+}
+
+.work .top-content p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+
 .flecha{
   margin: 0 auto;
   background: rgb(0, 0, 0);
@@ -14,40 +36,34 @@
 }
 
 
-
-.album .row .col .card{
+.album .row .col .workimg{
   border: none;
   position: relative;
   overflow: hidden ;
   text-align: center;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  
 }
 
-.album .row .col .card img{
-  width: 400px;
-	height: 400px;
+.album .row .col .workimg img{
+  width: 350px;
+	height: 350px;
+  margin-top: 1rem;
   transition: all 600ms;
 }
 
-.album .row .col .card:hover img{
-  transform: scale(1.8);
-} 
-
-.album .row .col .card .content{
+.album .row .col .workimg .content{
   position: absolute;
   right: 50%;
-  top: -10%;
+  bottom: 70%;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   transform: translate(50%, 50%) scale(0);
-  font-size: 1.5rem;
-  font-weight: 400;
-  background: rgba(3, 3, 3, 0.6);
-  padding: 1.5rem;
+  font-weight: 500;
+  background: rgba(255, 0, 0, 0.5);
+  padding: 1rem;
+  clip-path: polygon(10% 0, 50% 10%, 90% 0, 100% 70%, 80% 100%, 50% 90%, 20% 100%, 0 70%);
 }
 
-.album .row .col .card:hover .content{
+.album .row .col .workimg:hover .content{
   transform: translate(50%, 50%) scale(1);
 }
 

@@ -5,10 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-//Module de aplication
+//Modulos de aplication
 import { AplicationModule } from './modules/aplication/aplication.module';
+import { WebModule } from './modules/web/web.module';
 //componete de aplicación Notfound
 import { NotFoundComponent } from './modules/aplication/shared/not-found/not-found.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import { ManageModule } from './modules/manage/manage.module';
+import { ManageRoutingModule } from './modules/manage/manage-routing.module';
 
 
 
@@ -20,8 +25,12 @@ import { NotFoundComponent } from './modules/aplication/shared/not-found/not-fou
   imports: [
     BrowserModule,
     AplicationModule,
+    WebModule,
+    ManageModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    ManageRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

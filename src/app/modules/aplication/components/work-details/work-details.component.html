@@ -1,0 +1,21 @@
+<section>
+      <!-- CONTENIDO SUPEIOR -->
+  <div class="top-content">
+    <div class="inf-content">
+        <div *ngIf="!work; else main_content">
+            <h1>cargando...</h1>
+        </div>
+        <ng-template #main_content>
+
+            <div class="row">
+                <div class="card">
+                    <img [src]="'http://localhost:3000/' + work.image" alt="">
+                    <p>{{work.titulo}}</p>
+                    <p>{{work.descripcion}}</p>
+                </div>
+            </div>
+
+        </ng-template>
+    </div>
+  </div>
+</section>

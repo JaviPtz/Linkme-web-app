@@ -19,6 +19,14 @@
   font-weight: 400;
 }
 
+.flecha{
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(75% 0, 75% 37%, 100% 40%, 50% 100%, 0 40%, 25% 40%, 25% 0);
+}
+
 /* NUESTRO EQUIPO */
 
 .about .our-team {

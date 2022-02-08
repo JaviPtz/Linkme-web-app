@@ -1,0 +1,31 @@
+<section>
+    <!-- CONTENIDO SUPEIOR -->
+<div class="top-content">
+  <div class="inf-content">
+      <div *ngIf="!work; else main_content">
+          <h1>cargando...</h1>
+      </div>
+      <ng-template #main_content>
+
+          <div class="row">
+              <div class="card">
+                  <img [src]="'http://localhost:3000/' + work.image" alt="">
+                  <form (submit)="updatePhoto(titulo, descripcion)">
+                      <div class="form-group">
+                          <input type="text" [value]="work.titulo" #titulo>
+                      </div>
+                      <div class="form-group">
+                        <textarea type="text" [value]="work.descripcion" #descripcion></textarea>
+                    </div>
+                    <button class="btn btn-primary">Actualizar</button>
+                  </form>
+                  
+              </div>
+              <button class="btn btn-danger" (click)="deletePhoto(id)">Eliminar</button>
+          </div>
+
+      </ng-template>
+  </div>
+</div>
+</section>
+
