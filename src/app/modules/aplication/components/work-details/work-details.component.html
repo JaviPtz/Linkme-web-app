@@ -1,21 +1,24 @@
-<section>
-      <!-- CONTENIDO SUPEIOR -->
-  <div class="top-content">
-    <div class="inf-content">
-        <div *ngIf="!work; else main_content">
-            <h1>cargando...</h1>
+<section class="work-details">
+    <div class="row g-5">
+        <div class="col-md-6 ">
+            <h1 class="text-center">{{ work.titulo }}</h1>
+            <p class="border">{{ work.descripcion }}</p>
         </div>
-        <ng-template #main_content>
 
-            <div class="row">
-                <div class="card">
-                    <img [src]="'http://localhost:3000/' + work.image" alt="">
-                    <p>{{work.titulo}}</p>
-                    <p>{{work.descripcion}}</p>
-                </div>
-            </div>
-
-        </ng-template>
+        <div class="col-md-6">
+            <img [src]="'http://localhost:3000/' + work.image" alt="" />
+        </div>
     </div>
-  </div>
+
+    <hr />
+
+    <div class="row g-5">
+        <div class="col-md-12">
+            <h3 class="text-center">Empieza un proyecto</h3>
+            <p class="border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem optio temporibus. Laborum, necessitatibus vero harum enim maiores maxime dolor eum explicabo, rerum at dolores impedit. Deleniti vero explicabo soluta?.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil quos ipsa omnis asperiores atque dolorum tempora dolores quis accusamus consequatur sed, voluptate magni totam consectetur amet. Modi eius tempora iusto?
+            </p>
+        </div>
+    </div>
 </section>

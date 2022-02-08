@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WorkService } from '../../../../services/work.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { WorkInterface } from '../../../../interfaces/workInterface';
+import {ToastrService} from 'ngx-toastr';
 
 interface HtmlInputEvent extends Event{
     target: HTMLInputElement & EventTarget;
@@ -19,11 +20,11 @@ export class DashboardComponent implements OnInit {
   myPhotosWorks!: [] | any;
   id!: string;
   work!: WorkInterface;
-  modal!: HTMLElement | any;
 
   constructor( private workService: WorkService,
     private router: Router,
-    private activateRoute:ActivatedRoute) { }
+    private activateRoute:ActivatedRoute,
+    private toastrService: ToastrService,) { }
 
   ngOnInit(): void {
     this.getmisworks()
@@ -38,16 +39,6 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  uploadWork(titulo: HTMLInputElement, descripcion: HTMLTextAreaElement): boolean{
-    this.workService.createPhoto(titulo.value, descripcion.value, this.file)
-    .subscribe(
-      res => console.log(res),
-      err => console.log(err)
-    )
-    return false;
-  }
-
-
   getmisworks(){
     this.workService.getPhotos()
     .subscribe(
@@ -59,21 +50,26 @@ export class DashboardComponent implements OnInit {
     )
   }
 
-  selectedCard(id: string){
-    this.router.navigate(['/manage/dash', id]);
+  uploadWork(titulo: HTMLInputElement, descripcion: HTMLTextAreaElement): boolean{
+    this.toastrService.success('Agregando, un momento por favor.', 'Listo.', {
+      timeOut: 1000,
+      progressBar: true
+    });
+    this.workService.createPhoto(titulo.value, descripcion.value, this.file)
+    .subscribe(
+      res => {
+        this.getmisworks();
+        console.log(res)},
+      err => console.log(err)
+    )
+  
+    return false;
   }
 
 
-
-  // Métodos de lo modales.
-  // openModal(name: string): void {
-  //   this.modal = document.getElementById(name);
-  //   this.modal.style.display = 'block';
-  // }
-
-  // closeModal(): void {
-  //   this. modal.style.display = 'none';
-  // }
+  selectedCard(id: string){
+    this.router.navigate(['/manage/dash', id]);
+  }
 
 
 }

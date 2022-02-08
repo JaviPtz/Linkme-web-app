@@ -5,7 +5,8 @@
 /* variables colores*/
 :root {
   /* generales*/
-  --color-general: rgba(100, 0, 0);
+  --color-general: rgb(31, 0, 0);
+  /* --color-general: rgba(100, 0, 0); */
   --color-menu: rgb(3, 3, 3);
   --color-letra: rgb(255, 255, 255);
   --color-pestanas-hover: rgba(100, 0, 0);
@@ -155,16 +156,17 @@ button[type=submit]{
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 /* Modal Content/Box */
 .pop-dialog-content {
+  text-align: center;
   background-color: #fefefe;
   overflow: auto;
-  margin: 10vh auto;
+  margin: 20vh auto;
   padding: 20px;
   max-height: 75vh;
-  width: 30%;
+  width: 40%;
   border-radius: 10px;
 }
 
@@ -173,25 +175,14 @@ button[type=submit]{
 }
 
 .pop-dialog-content form h2 {
-  color: var(--general);
+  color: var(--color-general);
 }
 
-.pop-dialog-content form input, .pop-dialog-content form textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  outline: none;
-  display: inline-block;
-  border: 1px solid var(--general);
-  border-radius: 10px;
-  box-sizing: border-box;
-  resize: none;
-}
 
 .pop-dialog-content form input[type=submit] {
   width: 100%;
-  background-color: var(--we-green);
-  color: white;
+  background-color: rgb(150, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -201,25 +192,16 @@ button[type=submit]{
 
 .pop-dialog-content form input[type=reset] {
   width: 100%;
-  background-color: #fefefe;
-  color: var(--general);
+  background-color: green;
+  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.pop-dialog-content form input:focus, .pop-dialog-content form textarea:focus {
-  border: 3px solid var(--general);
-}
 
 .pop-dialog-content form input[type=submit]:hover {
-  background-color: var(--we-green-hover);
-  color: white;
-}
-
-.pop-dialog-content form input[type=reset]:hover {
-  border-color: var(--general);
-  background-color: var(--general);
+  background-color: rgb(200, 0, 0);
   color: white;
 }

@@ -1,0 +1,70 @@
+.work-detail {
+  margin-top: 6rem;
+}
+
+.work-content-detail {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+}
+
+.img-work {
+  padding: 1rem;
+  border: 1px solid rgb(209, 0, 0);
+}
+
+.img-work > img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgb(209, 0, 0);
+}
+
+.form {
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.form label {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+input[type="text"] {
+  width: 100%;
+  border: 1px solid black;
+}
+
+textarea {
+  border: 1px solid rgb(209, 0, 0);
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline: none;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.actions{
+    position: absolute;
+    right: 230px;
+    top: 200px;
+}
+
+.actions .btn-update{
+    padding: 1rem;
+    background: rgb(14, 43, 138);
+    color: white;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.actions .btn-delete{
+    padding: 1rem;
+    background: rgb(150,0, 0);
+    color: white;
+    border-radius: 4px;
+}

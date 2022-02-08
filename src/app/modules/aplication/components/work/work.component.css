@@ -50,6 +50,11 @@
   transition: all 600ms;
 }
 
+.album .row .col .workimg img:hover{
+  padding: 1rem;
+  cursor: pointer;
+}
+
 .album .row .col .workimg .content{
   position: absolute;
   right: 50%;
@@ -68,5 +73,15 @@
 }
 
 /* FIN DE ALBUM */
+
+.work-example{
+  border: 1px solid rgb(238, 238, 238);
+}
+
+.work-example:hover{
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px 5px rgb(238, 238, 238);
+  cursor: pointer;
+}
 
 

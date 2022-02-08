@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { WorkService } from '../../../../services/work.service';
 import { WorkInterface } from 'src/app/interfaces/workInterface';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-work-detail',
@@ -12,11 +13,13 @@ export class WorkDetailComponent implements OnInit {
 
   id!: string;
   work!: WorkInterface;
+  modal!: HTMLElement | any;
 
   constructor(
     private router: Router,
     private activateRoute: ActivatedRoute,
-    private workService: WorkService
+    private workService: WorkService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -41,10 +44,21 @@ export class WorkDetailComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res);
-        this.router.navigate(['/manage/dash'])
+        this.toastrService.success('', 'Se elimino con éxito.', {
+          timeOut: 2000,
+          progressBar: true
+        });
       },
-      err => console.log(err)
-    )
+      err =>{
+        console.log(err)
+        this.toastrService.error('Error con el servidor.', 'error al borrar', {
+          timeOut: 2000,
+          progressBar: true
+        });
+      }
+    );
+    this.closeModal()
+    this.router.navigate(['/manage/dash'])
   }
 
   updatePhoto(titulo: HTMLInputElement, descripcion: HTMLTextAreaElement): boolean{
@@ -57,4 +71,15 @@ export class WorkDetailComponent implements OnInit {
     );
     return false
   }
+
+  // Métodos de lo modales.
+  openModal(name: string): void {
+    this.modal = document.getElementById(name);
+    this.modal.style.display = 'block';
+  }
+
+  closeModal(): void {
+    this. modal.style.display = 'none';
+  }
+
 }

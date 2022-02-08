@@ -1,31 +1,44 @@
-<section>
-    <!-- CONTENIDO SUPEIOR -->
-<div class="top-content">
-  <div class="inf-content">
-      <div *ngIf="!work; else main_content">
-          <h1>cargando...</h1>
+<section class="work-detail">
+  <!-- CONTENIDO SUPEIOR -->
+  <div class="work-content-detail" >
+      <!-- imagen  -->
+      <div class="img-work">
+        <img [src]="'http://localhost:3000/' + work.image" />
       </div>
-      <ng-template #main_content>
-
-          <div class="row">
-              <div class="card">
-                  <img [src]="'http://localhost:3000/' + work.image" alt="">
-                  <form (submit)="updatePhoto(titulo, descripcion)">
-                      <div class="form-group">
-                          <input type="text" [value]="work.titulo" #titulo>
-                      </div>
-                      <div class="form-group">
-                        <textarea type="text" [value]="work.descripcion" #descripcion></textarea>
-                    </div>
-                    <button class="btn btn-primary">Actualizar</button>
-                  </form>
-                  
-              </div>
-              <button class="btn btn-danger" (click)="deletePhoto(id)">Eliminar</button>
-          </div>
-
-      </ng-template>
-  </div>
-</div>
+      <!-- formulario para editar la información -->
+      <div class="form">
+        <form (submit)="updatePhoto(titulo, descripcion)">
+            <label>Titutlo:</label>
+            <input type="text" [value]="work.titulo" #titulo />
+            <label>Descripción:</label>
+            <textarea
+              type="text"
+              [value]="work.descripcion"
+              rows="6"
+              #descripcion
+            ></textarea>
+            <div class="actions">
+              <button class="btn-update">Actualizar</button>
+              <button class="btn-delete" (click)="openModal('deleted-work-modal')">
+                Eliminar
+              </button>
+            </div>
+        </form>
+      </div>
+    </div>
 </section>
 
+<!-- Modarl confirmación (ELIMINAR) -->
+
+<div id="deleted-work-modal" class="pop-dialog">
+  <!-- Modal content -->
+  <div class="pop-dialog-content">
+    <form>
+      <h2>¿Estas seguro de eliminar este Proyecto?</h2>
+      <div>
+        <input type="submit" value="Eliminar" (click)="deletePhoto(id)" />
+        <input type="reset" value="Cancelar" (click)="closeModal()" />
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.work-details{
+    margin-top: 9rem;
+}
+
+img{
+    width: 800px;
+    height: 400px;
+}
+
+hr{
+    border: 1px dashed rgb(0, 0, 0);
+    width: 50%;
+}
+
+h1, h3{
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: 500
+}
+
+p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    text-align: justify;
+    letter-spacing: 0.1rem;
+}

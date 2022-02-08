@@ -7,6 +7,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import {
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  
   public loginForm!: FormGroup;
   private validateEmail =
     /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
@@ -21,7 +23,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
   ngOnInit(): void {
     // Validaciones
@@ -40,16 +43,27 @@ export class LoginComponent implements OnInit {
       .login('login/', {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
-      })
-      .subscribe(
-        (res) => {
+      }).subscribe((res) => {
           console.log(res);
-
-          localStorage.setItem('token', res.token);
-          this.router.navigate(['/manage']);
+          if(res == null){
+            this.toastrService.info('Usuario no encontrado', 'credenciales incorectas',{
+              timeOut: 1500,
+              progressBar: true
+            });
+          }else{
+            this.toastrService.success('Iniciando, un momento...', 'Sesión iniciada',{
+              timeOut: 1500,
+              progressBar: true
+            });
+            localStorage.setItem('token', res.token);
+            this.router.navigate(['/manage']);
+          }
         },
         (error) => {
           console.log(error);
+          this.toastrService.error('ERROR', 'Error con el servidor', {
+            timeOut: 1500,
+          });
         }
       );
     this.loginForm.reset();

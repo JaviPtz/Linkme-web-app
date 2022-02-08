@@ -5,15 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
 //Modulos de aplication
 import { AplicationModule } from './modules/aplication/aplication.module';
 import { WebModule } from './modules/web/web.module';
+import { ManageModule } from './modules/manage/manage.module';
+import { ManageRoutingModule } from './modules/manage/manage-routing.module';
+
 //componete de aplicación Notfound
 import { NotFoundComponent } from './modules/aplication/shared/not-found/not-found.component';
 
-import {HttpClientModule} from '@angular/common/http';
-import { ManageModule } from './modules/manage/manage.module';
-import { ManageRoutingModule } from './modules/manage/manage-routing.module';
+//guards
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -29,8 +32,9 @@ import { ManageRoutingModule } from './modules/manage/manage-routing.module';
     ManageModule,
     AppRoutingModule,
     ManageRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
