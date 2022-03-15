@@ -58,14 +58,17 @@ export class WorkDetailComponent implements OnInit {
       }
     );
     this.closeModal()
-    this.router.navigate(['/manage/dash'])
+    // this.router.navigate(['/manage/dash'])
   }
 
   updatePhoto(titulo: HTMLInputElement, descripcion: HTMLTextAreaElement): boolean{
     this.workService.updatePhoto(this.id, titulo.value, descripcion.value)
     .subscribe(
       res =>{
-        this.router.navigate(['/manage'])
+        this.toastrService.success('', 'Se actualizo con éxito.', {
+          timeOut: 1500,
+          progressBar: true
+        });
       },
       err => console.log(err)
     );

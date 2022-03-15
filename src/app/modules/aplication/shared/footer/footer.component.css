@@ -33,14 +33,24 @@
     display: block;
     text-align: left;
     margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--color-letra);
+    transition:  0.4s ease;
 }
 
+.footer .we-row .contenido  a:hover{
+    color: var(--color-letra2) ;
+    cursor: pointer;
+}
+ 
 /* redes sociales */
 .footer .we-row .socials .social-icons{
     display: flex;
 }
 
+
 .footer .we-row .socials .social-icons .social-item img{
     height: 70px;
     width: 70px;
 }
+

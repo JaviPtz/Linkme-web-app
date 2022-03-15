@@ -1,28 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
-import { AuthService } from '../../../../services/auth.service';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
   public registerForm!: FormGroup;
   private validateEmail =
     /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 
-  constructor(
-    private authService: AuthService,
+  constructor(private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
-  ) {}
+    private router: Router,
+    private toastrService: ToastrService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -37,8 +33,18 @@ export class RegisterComponent implements OnInit {
   register(): void {
     console.log(this.registerForm.value);
     this.authService.register(this.registerForm.value);
+    if(this.registerForm.value == null){
+      this.toastrService.info('Error', 'complete los campos',{
+        timeOut: 1500,
+        progressBar: true
+      });
+    }else{
+      this.toastrService.success('Registratrando', 'Inicia sesión por favor',{
+        timeOut: 2000,
+        progressBar: true
+      });
+    }
     this.registerForm.reset();
-    this.router.navigateByUrl('/register');
   }
 
   // getters de formGroup
@@ -50,4 +56,5 @@ export class RegisterComponent implements OnInit {
   get password(): AbstractControl | any {
     return this.registerForm.get('password');
   }
+
 }

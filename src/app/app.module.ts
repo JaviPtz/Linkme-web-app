@@ -12,18 +12,15 @@ import { WebModule } from './modules/web/web.module';
 import { ManageModule } from './modules/manage/manage.module';
 import { ManageRoutingModule } from './modules/manage/manage-routing.module';
 
-//componete de aplicación Notfound
-import { NotFoundComponent } from './modules/aplication/shared/not-found/not-found.component';
-
 //guards
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
   ], 
   imports: [
     BrowserModule,
@@ -33,6 +30,8 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     ManageRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],

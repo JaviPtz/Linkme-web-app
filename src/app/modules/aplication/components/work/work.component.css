@@ -1,35 +1,5 @@
-.work {
-  text-align: justify;
-}
-
-.work .top-content h4 {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  background: rgb(230, 230, 230, 0.4);
-  padding: 1rem 0;
-  border-radius: 2rem;
-}
-
-.work .top-content p {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-
-.flecha{
-  margin: 0 auto;
-  background: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
-  clip-path: polygon(75% 0, 75% 37%, 100% 40%, 50% 100%, 0 40%, 25% 40%, 25% 0);
-}
-
 /* ALBUM */
-.album{
+/* .album{
   padding: 1rem;
   border: 1px;
   border: dashed rgb(0, 0, 0);
@@ -70,17 +40,25 @@
 
 .album .row .col .workimg:hover .content{
   transform: translate(50%, 50%) scale(1);
-}
+} */
 
 /* FIN DE ALBUM */
-
 .work-example{
   border: 1px solid rgb(238, 238, 238);
 }
 
+.work-example h3{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.work-example p{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .work-example:hover{
-  border-radius: 1rem;
-  box-shadow: 1px 1px 5px 5px rgb(238, 238, 238);
+  box-shadow: -1px 6px 10px 9px rgb(230, 230, 230);
   cursor: pointer;
 }
 

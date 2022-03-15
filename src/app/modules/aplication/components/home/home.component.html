@@ -1,11 +1,11 @@
 <!-- CONTENIDO HOME -->
 <section class="home" id="home">
   <div class="content">
-    <div>
+    <div data-aos="fade-right" data-aos-duration="2800" >
       <!-- TITULO BIENVENIDA -->
-      <h3 class="title">Welcome To linkme<span></span></h3>
+      <h3 class="title" >{{ 'TITLE_HOME' | translate }}<span></span></h3>
       <!-- DESCRIPCION  -->
-      <p>
+      <p >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis
         corrupti cupiditate qui repudiandae deserunt vero, quam sapiente magnam.
         Adipisci provident eos quia obcaecati aperiam nemo rerum, quas ea
@@ -16,20 +16,20 @@
 </section>
 
 <!-- CONTENIDO COMPARTIDO WORKS -->
-<section class="shared">
-  <h1 class="title-home">Our works</h1>
+<section class="shared" >
+  <h3 class="title-home">{{ 'NAV1' | translate}}</h3>
   <div class="row">
     <div class="shared-content">
-      <h3>We will provide you the best work</h3>
+      <h3>{{ "SUBTITLE1" | translate}}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam
         non ipsa. Aperiam similique deserunt, itaque esse odio ea error aliquam
         voluptatibus, non ab quas reiciendis at repudiandae modi quis.
       </p>
-      <a routerLink="/app/work" class="btn">read more</a>
+      <a routerLink="/app/work" class="btn">{{ "BTN_READ" | translate}}</a>
     </div>
-    <div class="image">
-      <img
+    <div class="image" data-aos="zoom-in" data-aos-duration="2500">
+      <img 
         src="http://www.solofondos.com/wp-content/uploads/2017/09/fondos-de-pantalla-hd-full-para-pc.jpg"
       />
     </div>
@@ -41,22 +41,22 @@
 
 <!-- CONTENIDO COMPARTIDO ABOUT -->
 <section class="shared">
-  <h1 class="title-home">About us</h1>
+  <h3 class="title-home">{{ 'NAV2' | translate}}</h3>
   <div class="row">
-    <div class="image">
+    <div class="image" data-aos="zoom-in" data-aos-duration="2500">
       <img
         src="https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440"
       />
     </div>
 
     <div class="shared-content">
-      <h3>We will provide you the best work</h3>
+      <h3>{{ "SUBTITLE1" | translate}}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam
         non ipsa. Aperiam similique deserunt, itaque esse odio ea error aliquam
         voluptatibus, non ab quas reiciendis at repudiandae modi quis.
       </p>
-      <a href="" class="btn">read more</a>
+      <a href="" class="btn">{{ "BTN_READ" | translate}}</a>
     </div>
   </div>
 </section>

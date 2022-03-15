@@ -1,32 +1,28 @@
-<section class="work-detail">
-  <!-- CONTENIDO SUPEIOR -->
-  <div class="work-content-detail" >
-      <!-- imagen  -->
-      <div class="img-work">
-        <img [src]="'http://localhost:3000/' + work.image" />
+<!-- CONTENIDO SUPEIOR -->
+<div class="top-manage">
+  <h1>Detalle del proyecto</h1>
+</div>
+<div class="work-content-detail">
+  <!-- imagen  -->
+  <div class="img-work">
+    <img [src]="'http://localhost:3000/' + work.image" />
+  </div>
+  <!-- formulario para editar la información -->
+  <div class="form">
+    <form (submit)="updatePhoto(titulo, descripcion)">
+      <label>Titutlo:</label>
+      <input type="text" [value]="work.titulo" #titulo />
+      <label>Descripción:</label>
+      <textarea type="text" [value]="work.descripcion" rows="6" #descripcion></textarea>
+      <div>
+        <button class="btn-update">Actualizar</button>
       </div>
-      <!-- formulario para editar la información -->
-      <div class="form">
-        <form (submit)="updatePhoto(titulo, descripcion)">
-            <label>Titutlo:</label>
-            <input type="text" [value]="work.titulo" #titulo />
-            <label>Descripción:</label>
-            <textarea
-              type="text"
-              [value]="work.descripcion"
-              rows="6"
-              #descripcion
-            ></textarea>
-            <div class="actions">
-              <button class="btn-update">Actualizar</button>
-              <button class="btn-delete" (click)="openModal('deleted-work-modal')">
-                Eliminar
-              </button>
-            </div>
-        </form>
-      </div>
-    </div>
-</section>
+    </form>
+    <button class="btn-delete" (click)="openModal('deleted-work-modal')">
+      Eliminar
+    </button>
+  </div>
+</div>
 
 <!-- Modarl confirmación (ELIMINAR) -->
 

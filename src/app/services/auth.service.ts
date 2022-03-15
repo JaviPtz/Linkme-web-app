@@ -52,7 +52,7 @@ export class AuthService {
     this.router.navigate(['/app']);
   }
 
-  /* getToken(): string {
+  getToken(): string | any {
     return localStorage.getItem('token');
-  } */
+  }
 }

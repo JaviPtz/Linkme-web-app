@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 //Componentes de aplicacion
 import { AplicationComponent } from './aplication.component';
@@ -9,28 +9,30 @@ import { WorkComponent } from './components/work/work.component';
 import { ClientComponent } from './components/client/client.component';
 import { ContacComponent } from './components/contac/contac.component';
 import { WorkDetailsComponent } from './components/work-details/work-details.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 const routes: Routes = [
     {
         path: 'app', component: AplicationComponent,
         children: [
-            {path: 'home', component: HomeComponent},
-            {path: 'work', component: WorkComponent},
-            {path: 'work/:id', component: WorkDetailsComponent},
-            {path: 'about', component: AboutComponent},
-            {path: 'our_story', component: StoryComponent},
-            {path: 'client', component: ClientComponent},
-            {path: 'contact', component: ContacComponent},
-            {path: '', redirectTo: '/app/home', pathMatch:'full'},
+            { path: 'home', component: HomeComponent },
+            { path: 'work', component: WorkComponent, pathMatch: 'full' },
+            { path: 'work/:id', component: WorkDetailsComponent },
+            { path: 'about', component: AboutComponent },
+            { path: 'our_story', component: StoryComponent },
+            { path: 'client', component: ClientComponent },
+            { path: 'contact', component: ContacComponent },
+            { path: '', redirectTo: '/app/home', pathMatch: 'full' },
         ]
     },
     {
         path: '', redirectTo: '/app/home', pathMatch: 'full'
     }
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class AplicationpRoutingModule { }

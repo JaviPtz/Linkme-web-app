@@ -5,9 +5,29 @@
     "NAV4":"clients",
     "NAV5":"contacts",
 
+    "TITLE_HOME": "Welcome to linkme",
+    "SUBTITLE1": "We will provide you the best work",
+
+    "TITLE_WORKS": "Echa un vistazo a nuestro trabajo",
+
+    "TITLE_ABOUT": "Automate workflows with ous",
+    "OUR_TEAM": "Our team",
+    "QUESTION1": "How are we?", 
+    "QUESTION2": "What are we doing here? ", 
+
+    "TITLE_CLIENT": "Our clients",
+    "SUBTITLE_CLIENT": "Most our happy clients",
+
     "TITLE_CONTACT": "feel free to contact us. we would love to hear from you",
     "UBICATION": "Address",
     "EMAIL": "Email" ,
     "TLF": "Phone",
-    "SOCIALS": "Socials"
+    "SOCIALS": "Socials",
+
+    "404": "Page not found",
+    "MESAGGE_404": "Sorry, but the page or file you were trying to access not exit",
+    "FRONT_PAGE": "Front page",
+
+
+    "BTN_READ": "Read more"
 }

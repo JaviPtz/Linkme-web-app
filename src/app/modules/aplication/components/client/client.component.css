@@ -1,37 +1,65 @@
-.client .carousel-inner .carousel-item {
-  padding: 3rem 9%;
-}
-
 .clients {
   margin: 10rem 0;
 }
 
-.items-team {
-  margin: 0 auto;
+.top-client{
+  text-align: center;
 }
 
-.client .carousel-inner .carousel-item .we-row {
-  margin-top: 6rem;
+.top-client h3{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.top-client h4{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Carrousel clientes */
+.carousel-item{
+  padding: 3rem 10%;
+}
+
+.carousel-inner .carousel-item .we-row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.client .carousel-inner .carousel-item .we-row .item {
-  text-align: center;
+.carousel-inner .carousel-item .we-row .item {
+  background: white;
+  padding: 0.7rem;
   margin: 0 auto;
+  border: 1px solid rgb(4, 44, 104);
 }
 
-.client .carousel-inner .carousel-item .we-row .item img {
-  clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 20% 100%, 0% 80%);
-  width: 400px;
-  height: 500px;
+.carousel-inner .carousel-item .we-row .item img {
+  background: white;
+  width: 398px;
+  height: 300px;
 }
 
-.name {
-  float: left;
-  margin-left: 2rem ;
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding: 1rem 0;
+/* botones next y prev */
+
+.carousel-control-prev{
+  position: absolute;
+  top: 300px;
+  border: 2px solid white;
+  border-radius: 0% 50% 50% 0%;
+  padding: 2.5rem;
+  padding-left: 2rem;
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+
+.carousel-control-next{
+  position: absolute;
+  top: 300px;
+  border: 2px solid white;
+  border-radius: 50% 0% 0% 50% ;
+  padding: 2.5rem;
+  width: 50px;
+  height: 50px;
+  background: black;
 }

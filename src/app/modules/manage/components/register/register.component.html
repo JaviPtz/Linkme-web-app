@@ -1,0 +1,36 @@
+<section id="register">
+    <!--  card contenedora -->
+    <div class="register-container">
+        <!--  titulo del formulario-->
+        <div>
+          <h2>Registrar Usuario</h2>
+        </div>
+        <!--  formulario reactivo-->
+        <div >
+          <form [formGroup]="registerForm" (submit)="register()">
+      
+            <!--   input para el email del usuario   -->
+            <div >
+              <input  type="text" formControlName="email" placeholder="email">
+              <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                 class="alert">
+                <p>El campo debe estar lleno</p>
+              </div>
+            </div>
+      
+            <!--   input para la contraseña del usuario   -->
+            <div >
+              <input type="password" formControlName="password" placeholder="contraseña">
+              <div *ngIf="password.invalid && (email.dirty || password.touched)"
+                 class="alert">
+                <p>El campo debe estar lleno</p>
+              </div>
+            </div>
+            <!-- boton para el envio de la data-->
+            <input type="submit" class="btn we-btn-primary btn-form" [disabled]="registerForm.invalid" value="Registrar">
+          </form>
+          <br >
+        </div>
+      
+      </div>
+  </section>

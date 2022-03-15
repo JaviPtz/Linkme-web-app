@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavbarComponent implements OnInit {
   mobile_menu: any;
   mobile_item: any;
+
    /* lista de idiomas */
   langs: string[] =[];
 
@@ -19,16 +20,29 @@ export class NavbarComponent implements OnInit {
     this.langs = translate.getLangs();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
 
-  /* MOSTRAR EL MENU */
+    // Ocultar el navabr
+    let nav = document.querySelector('.header')
+    let lastScrollY = window.scrollY;
+     window.addEventListener('scroll', ()=>{
+        if(lastScrollY < window.scrollY){
+          nav?.classList.add('nav--hidden');
+        }else{
+          nav?.classList.remove('nav--hidden');
+        }
+        lastScrollY = window.scrollY;
+     });
+  }
+
+  // Mostrar el menu
   menu() {
     this.mobile_menu = document
       .querySelector('.header .navbar .nav-list ul')
       ?.classList.toggle('active');
   }
 
-  /* OCULTAR MENU */
+  // Ocultar el menu
   removeMemu() {
     this.mobile_item = document
       .querySelector('.header .navbar .nav-list ul li a')
@@ -37,8 +51,9 @@ export class NavbarComponent implements OnInit {
       .querySelector('.header .navbar .nav-list ul')
       ?.classList.toggle('active');
   }
-  /* Cambiar idioma */
+  // Escoger idioma es - en
   changeLang(lang: string){
     this.translate.use(lang);
   }
+
 }

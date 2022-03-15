@@ -19,6 +19,8 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { WorkDetailsComponent } from './components/work-details/work-details.component';
+//componete de aplicación Notfound
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +39,7 @@ export function createTranslateLoader(http: HttpClient) {
     ContacComponent,
     FooterComponent,
     WorkDetailsComponent,
-    
+    NotFoundComponent
   ],
   imports: [
     CommonModule,

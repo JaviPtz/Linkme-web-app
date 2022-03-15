@@ -1,16 +1,76 @@
-.header{
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: auto;
-    min-height: 8vh;
-    background-color: var(--color-general);
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-.header .navbar{
-    padding: 2rem 9%;
-    font-size: 2rem;
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--color-general);
+    transition: all .5 ease;
 }
+
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: rgb(65, 0, 0);
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color:  white;
+    padding-left: 40px;
+    transition:  .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a svg{
+    margin-right: 16px;
+}
+
+
+
+#check{
+    position: absolute;
+    z-index: 1111;
+    left: 40px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ .section{
+    margin-left: 250px;
+}
+
+.perfil,.help,.out{
+    padding-left: 1.5rem;
+}
+
+.submenu .perfil:hover,.help:hover,.out:hover {
+    padding-left: 3rem;
+    cursor: pointer;
+    border-left: 1px solid rgb(255, 255, 255);
+}
+
+
+
+

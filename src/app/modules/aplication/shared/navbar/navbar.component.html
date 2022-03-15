@@ -1,5 +1,5 @@
 <!-- navbar -->
-<header class="header">
+<header class="header" id="navbar">
   <nav class="navbar">
     <div class="logo">
       <a href="/app/home">LINKME</a>
@@ -8,48 +8,27 @@
     <!-- LISTA DE NAVEGACION -->
     <div class="nav-list">
       <div class="hamburguer" (click)="menu()">
-        <img
-          id="bar"
-          src="https://img.icons8.com/plumpy/24/000000/menu-rounded.png"
-        />
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+          fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
       </div>
       <ul class="lista">
         <li>
-          <a routerLink="/app/work" routerLinkActive="active" data-after="Works"
-          (click)="removeMemu()">{{ 'NAV1' | translate}}</a
-          >
+          <a routerLink="/app/work" data-after="Works" (click)="removeMemu()">{{ 'NAV1' | translate}}</a>
         </li>
         <li>
-          <a
-            routerLink="/app/about"
-            routerLinkActive="active"
-            data-after="About"
-            (click)="removeMemu()">{{ 'NAV2' | translate}}</a
-          >
+          <a routerLink="/app/about" data-after="About" (click)="removeMemu()">{{ 'NAV2' | translate}}</a>
         </li>
         <li>
-          <a
-            routerLink="/app/our_story"
-            routerLinkActive="active"
-            data-after="Story"
-            (click)="removeMemu()">{{ 'NAV3' | translate}}</a
-          >
+          <a routerLink="/app/our_story" data-after="Story" (click)="removeMemu()">{{ 'NAV3' | translate}}</a>
         </li>
         <li>
-          <a
-            routerLink="/app/client"
-            routerLinkActive="active"
-            data-after="Clients"
-            (click)="removeMemu()">{{ 'NAV4' | translate}}</a
-          >
+          <a routerLink="/app/client" data-after="Clients" (click)="removeMemu()">{{ 'NAV4' | translate}}</a>
         </li>
         <li>
-          <a
-            routerLink="/app/contact"
-            routerLinkActive="active"
-            data-after="Contac"
-            (click)="removeMemu()">{{ 'NAV5' | translate}}</a
-          >
+          <a routerLink="/app/contact" data-after="Contac" (click)="removeMemu()">{{ 'NAV5' | translate}}</a>
         </li>
         <li>
           <select #langSelect (change)="changeLang(langSelect.value)" class="languaje">

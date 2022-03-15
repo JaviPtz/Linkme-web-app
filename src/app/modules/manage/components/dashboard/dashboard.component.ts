@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkService } from '../../../../services/work.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { WorkInterface } from '../../../../interfaces/workInterface';
 import {ToastrService} from 'ngx-toastr';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+/* carga de scripts */
+import { CargarScriptsService } from '../../../../cargar-scripts.service';
 
+CargarScriptsService
 interface HtmlInputEvent extends Event{
     target: HTMLInputElement & EventTarget;
 }
@@ -16,6 +20,7 @@ export class DashboardComponent implements OnInit {
 
   file!: File;
   photoSelected!: string | ArrayBuffer | any;
+  public workForm!: FormGroup;
 
   myPhotosWorks!: [] | any;
   id!: string;
@@ -23,11 +28,27 @@ export class DashboardComponent implements OnInit {
 
   constructor( private workService: WorkService,
     private router: Router,
-    private activateRoute:ActivatedRoute,
-    private toastrService: ToastrService,) { }
+    private toastrService: ToastrService,
+    private _cargarScripts:CargarScriptsService,
+    private formBuilder: FormBuilder,
+    ) { 
+
+      this._cargarScripts.Carga(["estilos/stilos"]);
+    }
 
   ngOnInit(): void {
-    this.getmisworks()
+    this.workForm = this.formBuilder.group({
+      title: [
+        '',
+        [Validators.required],
+      ],
+      description: [
+        '',
+        [Validators.required],
+      ],
+    });
+    this.getmisworks();
+    
   }
 
   fotoSeleccionada(event: any):void{
@@ -69,6 +90,17 @@ export class DashboardComponent implements OnInit {
 
   selectedCard(id: string){
     this.router.navigate(['/manage/dash', id]);
+  }
+
+
+  // getters de formGroup
+
+  get title(): AbstractControl | any {
+    return this.workForm.get('title');
+  }
+
+  get description(): AbstractControl | any {
+    return this.workForm.get('description');
   }
 
 

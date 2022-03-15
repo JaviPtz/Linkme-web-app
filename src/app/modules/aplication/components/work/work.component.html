@@ -1,30 +1,38 @@
 <section class="work">
   <!-- CONTENIDO SUPEIOR -->
   <div class="top-content">
-    <div class="inf-content">
+    <div class="inf-content" >
       <div class="description">
-        <h4>Hecha un vistazo nuestro trabajo</h4>
-        <p>
+        <h3 data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1800">{{ 'TITLE_WORKS' | translate }}</h3>
+        <p data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quo
           laborum consequuntur sit rerum.
         </p>
-        <p>
+        <p data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos
           ut necessitatibus.
         </p>
       </div>
       <br />
       <br />
-      <div class="flecha"></div>
+      <div class="flecha" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="2000"></div>
     </div>
   </div>
   <!-- album -->
-  <div class="album">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
+  <!-- <div class="album">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4"> -->
       <!-- proyecto -->
-      <div class="col" *ngFor="let workPhoto of myPhotosWorks">
+      <!-- <div class="col" *ngFor="let workPhoto of myPhotosWorks">
         <div class="workimg" (click)="selectedCard(workPhoto._id)">
-          <img
+          <img data-aos="zoom-out"  data-aos-duration="2400"
             [src]="'http://localhost:3000/' + workPhoto.image"
           />
           <div class="content">
@@ -33,29 +41,32 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <br />
-
-  <!-- otro album -->
-  <div class="row mb-2">
-    <div class="col-md-6" *ngFor="let workPhoto of myPhotosWorks">
-      <div class="row g-0 work-example overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">{{workPhoto.titulo}}</h3>
-          <div class="mb-1 text-muted">---------------------------------------------------------------</div>
-          <p class="card-text mb-auto">{{workPhoto.descripcion}}</p>
-          <p  class="stretched-link" (click)="selectedCard(workPhoto._id)">Seguir leyendo</p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img width="350" height="350"
-              [src]="'http://localhost:3000/' + workPhoto.image"
-            />
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
+
+<div id="container-white">
+  <section>
+    <!-- otro album -->
+    <div class="row mb-2">
+     <div class="col-md-6" *ngFor="let workPhoto of myPhotosWorks">
+       <div data-aos="zoom-in-up"  data-aos-duration="2000" class="row g-0 work-example overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+         <div class="col p-4 d-flex flex-column position-static" >
+           <h3>{{workPhoto.titulo}}</h3>
+           <hr />
+           <p >{{workPhoto.descripcion}}</p>
+           <p  (click)="selectedCard(workPhoto._id)">Seguir leyendo...</p>
+         </div>
+         <div class="col-auto d-none d-lg-block">
+           <img width="400" height="400"
+               [src]="'http://localhost:3000/' + workPhoto.image"
+             />
+         </div>
+       </div>
+     </div>
+   </div>
+  </section>
+</div>
 
 
 

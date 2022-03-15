@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // Componentes de web
-import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 // rutas de web
 import { WebRoutingModule } from './web-routing.module';
@@ -14,7 +13,6 @@ import { AuthService } from 'src/app/services/auth.service';
 
 @NgModule({
   declarations: [
-    RegisterComponent,
     LoginComponent
   ],
   imports: [

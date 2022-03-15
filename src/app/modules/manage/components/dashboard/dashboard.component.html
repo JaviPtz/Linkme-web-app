@@ -1,67 +1,55 @@
-<section class="manage">
-  
-  <div class="new-admin">
-    <button class="btn-add" routerLink="/register">
-      Agregar administrador
-    </button>
-  </div>
+<div class="top-manage">
+  <h1>Projectos</h1>
+</div>
+<!-- contenido -->
+<div class="manage-content">
+  <!-- formulario -->
+  <div class="form">
+      <h3>Formulario Projectos</h3>
+    <div class="col">
+        <form [formGroup]="workForm"  (submit)="uploadWork(titulo, descripcion)">
+          <div>
+            <input type="text" placeholder="Titulo del proyecto" formControlName="title"  #titulo />
+            <div *ngIf="title.invalid && (title.dirty || title.touched)"
+                 class="alert">
+                <p>El campo debe estar lleno</p>
+              </div>
+          </div>
+          <div>
+            <textarea type="text" rows="5" placeholder="Descripción" formControlName="description"  #descripcion></textarea>
+            <div *ngIf="description.invalid && (description.dirty || description.touched)"
+            class="alert">
+           <p>Esto es necesario</p>
+         </div>
+          </div>
+          <div>
+            <input type="file" id="file " (change)="fotoSeleccionada($event)" #photoInput />
+            <div id="preview" >
 
-  <!-- Detalle -->
-  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-2">
-    <!-- formulario -->
-    <div class="form">
-      <div class="col">
-        <h3>Formulario</h3>
-        <div>
-          <form (submit)="uploadWork(titulo, descripcion)">
-            <div>
-              <input
-                type="text"
-                placeholder="Titulo del proyecto"
-                required
-                #titulo
-              />
             </div>
-            <div>
-              <textarea
-                type="text"
-                rows="5"
-                placeholder="Descripción"
-                required
-                #descripcion
-              ></textarea>
-            </div>
-            <div>
-              <input
-                type="file"
-                (change)="fotoSeleccionada($event)"
-                #photoInput
-              />
-            </div>
-            <button class="btn-add">Agregar</button>
-          </form>
-        </div>
-      </div>
-    
+          </div>
+          <button class="btn-add" [disabled]="workForm.invalid">Agregar</button>
+        </form>
     </div>
 
-    <!-- proyecto -->
+  </div>
+
+  <!-- proyecto -->
+  <div class="project-content">
+    <h3>Proyectos Agregados</h3>
+    <hr />
     <div class="projects">
-      <h3>Proyecto Actuales</h3>
-      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-xl-6">
         <div class="col" *ngFor="let workPhoto of myPhotosWorks">
           <div class="project">
             <div class="title">
-              {{ workPhoto.titulo }}
+              <p>{{ workPhoto.titulo }}</p>
             </div>
-            <img class="image"
-              (click)="selectedCard(workPhoto._id)"
-              data-bs-toggle="modal"
-              [src]="'http://localhost:3000/' + workPhoto.image"
-            />
+            <img class="image" (click)="selectedCard(workPhoto._id)" data-bs-toggle="modal"
+              [src]="'http://localhost:3000/' + workPhoto.image" />
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

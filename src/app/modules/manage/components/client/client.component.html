@@ -1,0 +1,43 @@
+<!-- CONTENIDO SUPEIOR -->
+<div class="top-manage">
+    <h1>Clientes</h1>
+</div>
+<div class="client-content-detail">
+    <!-- tabla -->
+    <table class="table">
+        <thead>
+            <tr>
+                <td>nombres</td>
+                <td>Correo</td>
+                <td>Número de teléfono</td>
+                <td>Razón de la cita</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let client of myClients">
+            <tr>
+                <td>{{client.namesS}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.numberPhone}}</td>
+                <td>{{client.reason}}</td>
+                <td><button class="btn-delete" (click)="openModal('deleted-client-modal', client._id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Modal confirmación (ELIMINAR) -->
+
+    <div id="deleted-client-modal" class="pop-dialog">
+        <!-- Modal content -->
+        <div class="pop-dialog-content">
+            <form>
+                <h2>¿Estas seguro de eliminar este Proyecto?</h2>
+                <div>
+                    <input type="submit" value="Eliminar" (click)="deleteClient(id)" />
+                    <input type="reset" value="Cancelar" (click)="closeModal()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

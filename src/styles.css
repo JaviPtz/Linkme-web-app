@@ -5,17 +5,17 @@
 /* variables colores*/
 :root {
   /* generales*/
-  --color-general: rgb(31, 0, 0);
+  --color-general: rgb(32, 0, 0);
   /* --color-general: rgba(100, 0, 0); */
   --color-menu: rgb(3, 3, 3);
   --color-letra: rgb(255, 255, 255);
+  --color-letra2: rgb(76, 76, 76);
   --color-pestanas-hover: rgba(100, 0, 0);
-  --color-boton-hover: rgb(120, 0, 0);
 
 
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,13 +25,35 @@
   transition: all 0.2s linear;
 }
 
+body{
+  background:  rgb(245, 245, 245) ;
+}
+
+#container-white{
+  background: white ;
+}
+
 /* Quitar ::-webkit-scrollbar con su propiedad display:none para mostrar los scrolls*/
 
 html::-webkit-scrollbar {
-  font-family: "Coming Soon", cursive;
-  font-family: "Montserrat", sans-serif;
   display: none;
 }
+
+
+/*  TITULOS PANTALLA HOME */
+
+.title-home{
+  font-size: 2rem ;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 1rem solid var(--color-general);
+}
+
+/* ------------------- */
+/* Estilos compartidos */
+/* ------------------- */
 
 section {
   padding: 3rem 9%;
@@ -42,7 +64,7 @@ section {
 .top-content{
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,43 +72,44 @@ section {
 
 .top-content .inf-content{
   max-width: 800px;
-  padding: 1rem;
+}
+
+
+.top-content h3 {
   text-align: center;
-}
-
-.top-content .inf-content .description{
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
 }
 
-.header-content p {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  font-weight: 300;
+.top-content p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 2rem 0;
 }
 
-/*  TITULOS PANTALLA HOME */
 
-.title-home{
-  font-size: 2rem ;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left: 1rem solid var(--color-menu);
-}
+/* ----------------------- */
+/* Fin Estilos compartidos */
+/* ----------------------- */
+
 
 /* Estilos para Login y registro */
 
 #login, #register{
   position: relative;
+  padding: 10rem 0;
 }
 
 #login .login-container,
 #register .register-container{
   text-align: center;
-  box-shadow: 5px 5px 5px 5px rgb(230, 230, 230);
+  background: white;
+  box-shadow: 1px 1px 8px 10px rgb(230, 230, 230);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -94,42 +117,42 @@ section {
 
 #login .login-container > div,
 #register .register-container > div{
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #login .login-container form> div,
 #register .register-container form> div{
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 input[type=text] {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius:  4px;
+  border: 1px solid var(--color-general);
+  border-radius:  5px;
   resize: vertical;
 }
 
 input[type=password] {
   width: 100%;
   padding: 1rem;;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius: 4px;
+  border: 1px solid var(--color-general);
+  border-radius: 5px;
   resize: vertical;
 }
 
 
 input[type=submit] {
-  background-color: #001f13;
+  background-color: #01962e;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #be0000;
+  background-color: #be000062;
 }
 
 button[type=submit]{
@@ -138,7 +161,6 @@ button[type=submit]{
   color: white;
   border-radius: 4px;
 }
-
 
 
 
@@ -205,3 +227,31 @@ button[type=submit]{
   background-color: rgb(200, 0, 0);
   color: white;
 }
+
+/* ------ */
+/* Flecha */
+/* ------ */
+
+.flecha{
+  margin: 0 auto;
+  background: var(--color-general);
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(75% 0, 75% 37%, 100% 40%, 50% 100%, 0 40%, 25% 40%, 25% 0);
+}
+
+/* Estilos chatbot dialowgflow */
+
+df-messenger {
+  --df-messenger-bot-message: rgb(102, 0, 0);
+  --df-messenger-button-titlebar-color: white;
+  --df-messenger-button-titlebar-font-color: var(--color-general);
+  --df-messenger-font-color: white;
+  --df-messenger-input-box-color: var(--color-general);
+  --df-messenger-input-font-color: white;
+  --df-messenger-input-placeholder-font-color: rgb(255, 255, 255);
+  --df-messenger-minimized-chat-close-icon-color: red;
+  --df-messenger-chat-background-color: #e7e7e7;
+  --df-messenger-send-icon: #ffffff;
+  --df-messenger-user-message: #161616;
+ }

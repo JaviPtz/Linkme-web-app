@@ -1,0 +1,29 @@
+/* Preguntas */
+.content-3 .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.content-3 .row .shared-content {
+  flex: 1 1 30rem;
+  height: 450px;
+  margin: 0rem 1rem;
+}
+
+.content-3 .row .shared-content h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.content-3 .row .shared-content p {
+  color: var(--color-letra2);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+

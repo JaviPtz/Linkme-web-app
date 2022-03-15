@@ -1,16 +1,35 @@
 {
     
-    "NAV1":"trabajos",
-    "NAV2":"sobre nosotros",
-    "NAV3":"historia",
-    "NAV4":"clientes",
-    "NAV5":"contactos",
+    "NAV1":"Trabajos",
+    "NAV2":"Sobre nosotros",
+    "NAV3":"Historia",
+    "NAV4":"Clientes",
+    "NAV5":"Contactos",
+
+    "TITLE_HOME": "Bienvenido a linkme",
+    "SUBTITLE1": "Le proporcionaremos el mejor trabajo",
+
+    "TITLE_WORKS": "Take a look at our work",
+
+    "TITLE_ABOUT": "Ayudamos a varias empresas automatizar su trabajo",
+    "OUR_TEAM": "Nuestro equipo",
+    "QUESTION1": "¿Quiénes somos?", 
+    "QUESTION2": "¿Qué hacemos?", 
+
+    "TITLE_CLIENT": "Nuestros",
+    "SUBTITLE_CLIENT": "Muchos de nuestros cleintes Felices",
 
     "TITLE_CONTACT": "Siente libre de contactarnos, nos gustaria escucharte",
     "UBICATION": "Dirección",
     "EMAIL": "Correo electrÓnico" ,
     "TLF": "N° de telefonos",
-    "SOCIALS": "Redes sociales"
+    "SOCIALS": "Redes sociales",
+
+    "404": "Página no encontrada",
+    "MESAGGE_404": "Lo sentimos, pero la pagina o archivo al que intentaste acceder no existe",
+    "FRONT_PAGE": "Página Principal",
+
+    "BTN_READ": "leer más..."
 
 
 }
